@@ -1,17 +1,21 @@
-name: build github actions
+name: Montara CI
 on:
-  push:
+  pull_request:
     branches:
-      - "**"
-      - "!main"
+      - "main"
+      - "montara_main"
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
 jobs:
   montara:
     runs-on: ubuntu-latest
     steps:
       - name: Montara CI
+        uses: montara-io/montara-ci@v0.1.6
         env:
-          MONTARA_GITHUB_TOKEN: ${{ secrets.MONTARA_GITHUB_TOKEN }}
-        uses: montara-io/montara-ci@v0.0.7
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          webhookUrl: https://staging-hooks.montara.io/pipeline/v2/trigger/36a07953-feac-4de5-a2e8-fbcbe2373e57
-          isStaging: true
+          webhookUrl: https://hooks.montara.io/pipeline/v2/trigger/791e57fc-5830-452d-bca2-1e1384a41168
