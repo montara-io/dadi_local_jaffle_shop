@@ -36,3 +36,5 @@ dispatch:
 query-comment:
   comment: '{{ dbt_snowflake_monitoring.get_query_comment(node) }}'
   append: true # Snowflake removes prefixed comments.
+vars:
+  test_dadi: "value_non_replaced"
