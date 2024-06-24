@@ -1,5 +1,4 @@
 --start_query
-WITH RAW_LISTINGS AS ( SELECT * FROM {{ source('RAW_LISTINGS', 'RAW_LISTINGS') }})
 
 SELECT * FROM ( 
   select
