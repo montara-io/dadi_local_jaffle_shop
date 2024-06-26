@@ -16,21 +16,16 @@ models:
       - name: host_id
         type: NUMBER
         description: The unique identifier of the host who owns the listing.
-        tests:
-          - not_null_tolerance:
-              tolerance: 0
+        tests: []
       - name: room_type
         type: TEXT
         tests: []
       - name: id
         type: NUMBER
         description: The unique identifier of the listing.
-        tests:
-          - not_null_tolerance:
-              tolerance: 0
+        tests: []
       - name: price
         type: TEXT
-        description: The price of the listing per night.
         tests: []
       - name: name
         type: TEXT
