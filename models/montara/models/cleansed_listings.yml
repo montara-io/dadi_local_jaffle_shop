@@ -23,7 +23,9 @@ models:
       - name: id
         type: NUMBER
         description: The unique identifier of the listing.
-        tests: []
+        tests:
+          - not_null_tolerance:
+              tolerance: 0
       - name: price
         type: TEXT
         tests: []
