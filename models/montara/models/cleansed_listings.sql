@@ -7,8 +7,7 @@ SELECT * FROM (
 *
 from
 raw_listings__raw_listings
-where
-id is not null
+where id is not null
 ) AS montara_model
 --<INCREMENTAL>
 {% if is_incremental() %}
@@ -22,6 +21,5 @@ id is not null
 --from
 --  raw_listings__raw_listings 
 --  
---where
---  id is not null
+--where id is not null
 --</ORIGINAL_CODE>
