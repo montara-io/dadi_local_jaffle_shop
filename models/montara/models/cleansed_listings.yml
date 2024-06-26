@@ -28,6 +28,7 @@ models:
               tolerance: 0
       - name: price
         type: TEXT
+        description: The price of the listing per night.
         tests: []
       - name: name
         type: TEXT
