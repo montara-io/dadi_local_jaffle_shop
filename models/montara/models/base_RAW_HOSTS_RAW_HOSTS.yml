@@ -5,7 +5,22 @@ models:
     config:
       materialized: table
     tests: []
-    columns: []
+    columns:
+      - name: name
+        type: TEXT
+        tests: []
+      - name: updated_at
+        type: TIMESTAMP
+        tests: []
+      - name: is_superhost
+        type: TEXT
+        tests: []
+      - name: id
+        type: NUMBER
+        tests: []
+      - name: created_at
+        type: TIMESTAMP
+        tests: []
     meta:
       model_tags:
         - eee75292-b208-472d-a53c-eafa6e168341
