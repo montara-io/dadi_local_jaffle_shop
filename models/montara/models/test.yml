@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: test
+    description: ""
+    config:
+      materialized: table
+    tests: []
+    columns: []
+    meta:
+      model_tags:
+        - 1f9a9e04-9372-4923-8253-be425f9420b0

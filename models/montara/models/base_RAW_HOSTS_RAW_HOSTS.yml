@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: base_RAW_HOSTS_RAW_HOSTS
+    description: ""
+    config:
+      materialized: table
+    tests: []
+    columns: []
+    meta:
+      model_tags:
+        - eee75292-b208-472d-a53c-eafa6e168341

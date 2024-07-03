@@ -1,0 +1,33 @@
+version: 2
+models:
+  - name: customers
+    description: ""
+    config:
+      materialized: table
+    tests: []
+    columns:
+      - name: CUSTOMER_ID
+        type: NUMBER
+        tests:
+          - not_null_tolerance:
+              tolerance: 0
+      - name: MOST_RECENT_ORDER
+        type: DATE
+        tests: []
+      - name: LAST_NAME
+        type: TEXT
+        tests: []
+      - name: CUSTOMER_LIFETIME_VALUE
+        type: NUMBER
+        tests: []
+      - name: NUMBER_OF_ORDERS
+        type: NUMBER
+        tests: []
+      - name: FIRST_ORDER
+        type: DATE
+        tests: []
+      - name: FIRST_NAME
+        type: TEXT
+        tests: []
+    meta:
+      model_tags: []
