@@ -7,18 +7,24 @@ sources:
       - name: RAW_REVIEWS
         description: ""
         columns:
-          - name: REVIEWER_NAME
+          - name: comments
             type: TEXT
+            description: The textual feedback provided by the reviewer.
             tests: []
-          - name: COMMENTS
+          - name: sentiment
             type: TEXT
+            description: The sentiment rating derived from the comments, indicating
+              positive, neutral, or negative sentiment.
             tests: []
-          - name: DATE
-            type: TIMESTAMP
-            tests: []
-          - name: SENTIMENT
-            type: TEXT
-            tests: []
-          - name: LISTING_ID
+          - name: listing_id
             type: NUMBER
+            description: The unique identifier of the property or listing that was reviewed.
+            tests: []
+          - name: reviewer_name
+            type: TEXT
+            description: The name of the user who submitted the review.
+            tests: []
+          - name: date
+            type: TIMESTAMP
+            description: The date on which the review was submitted.
             tests: []
