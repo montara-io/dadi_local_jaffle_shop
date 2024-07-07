@@ -3,7 +3,8 @@ models:
   - name: test
     description: test desc
     config:
-      materialized: table
+      materialized: incremental
+      incremental_strategy: append
     tests: []
     columns:
       - name: created_at
@@ -24,3 +25,7 @@ models:
     meta:
       model_tags:
         - 1f9a9e04-9372-4923-8253-be425f9420b0
+      incremental_column: created_at
+      data_retention_days:
+        staging: 180
+        production: 30
