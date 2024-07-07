@@ -1,0 +1,24 @@
+version: 2
+models:
+  - name: stg_orders
+    description: ""
+    config:
+      materialized: view
+    tests: []
+    columns:
+      - name: ORDER_ID
+        type: NUMBER
+        tests: []
+      - name: STATUS
+        type: TEXT
+        tests: []
+      - name: CUSTOMER_ID
+        type: NUMBER
+        tests:
+          - not_null_tolerance:
+              tolerance: 0
+      - name: ORDER_DATE
+        type: DATE
+        tests: []
+    meta:
+      model_tags: []
