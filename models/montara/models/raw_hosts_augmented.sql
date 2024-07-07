@@ -2,24 +2,26 @@
 --<DBT_CODE>
 WITH RAW_HOSTS__RAW_HOSTS AS ( SELECT * FROM {{ source('RAW_HOSTS', 'RAW_HOSTS') }})
 
-select
+SELECT
 id,
 name,
 is_superhost,
-MIN(DATEADD(year, 5, created_at),current_date) created_at,
-MIN(DATEADD(year, 5, updated_at),current_date) updated_at
-from
+LEAST(DATEADD(year, 3, created_at), CURRENT_DATE) AS created_at,
+LEAST(DATEADD(year, 3, updated_at), CURRENT_DATE) AS updated_at
+FROM
 raw_hosts__raw_hosts
-order by updated_at DESC
+ORDER BY
+updated_at desc
 --</DBT_CODE>
 --<ORIGINAL_CODE>
---select
+--SELECT
 --  id,
 --  name,
 --  is_superhost,
---  MIN(DATEADD(year, 5, created_at),current_date) created_at,
---  MIN(DATEADD(year, 5, updated_at),current_date) updated_at
---from
+--  LEAST(DATEADD(year, 3, created_at), CURRENT_DATE) AS created_at,
+--  LEAST(DATEADD(year, 3, updated_at), CURRENT_DATE) AS updated_at
+--FROM
 --  raw_hosts__raw_hosts
---order by updated_at DESC
+--ORDER BY
+--  updated_at desc
 --</ORIGINAL_CODE>
