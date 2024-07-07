@@ -10,8 +10,7 @@ DATEADD(year, 5, created_at) created_at,
 DATEADD(year, 5, updated_at) updated_at
 from
 raw_hosts__raw_hosts
-limit
-10
+order by updated_at DESC
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 --select
@@ -22,6 +21,6 @@ limit
 --  DATEADD(year, 5, updated_at) updated_at
 --from
 --  raw_hosts__raw_hosts
---limit
---  10
+--order by updated_at DESC
+--
 --</ORIGINAL_CODE>
