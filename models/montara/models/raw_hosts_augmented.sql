@@ -2,10 +2,26 @@
 --<DBT_CODE>
 WITH RAW_HOSTS__RAW_HOSTS AS ( SELECT * FROM {{ source('RAW_HOSTS', 'RAW_HOSTS') }})
 
-select * from raw_hosts__raw_hosts
-limit 10
+select
+id,
+name,
+is_superhost,
+DATEADD(year, 5, created_at) created_at,
+DATEADD(year, 5, updated_at) updated_at
+from
+raw_hosts__raw_hosts
+limit
+10
 --</DBT_CODE>
 --<ORIGINAL_CODE>
---select * from raw_hosts__raw_hosts 
---limit 10
+--select
+--  id,
+--  name,
+--  is_superhost,
+--  DATEADD(year, 5, created_at) created_at,
+--  DATEADD(year, 5, updated_at) updated_at
+--from
+--  raw_hosts__raw_hosts
+--limit
+--  10
 --</ORIGINAL_CODE>
