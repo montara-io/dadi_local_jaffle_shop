@@ -6,8 +6,8 @@ select
 id,
 name,
 is_superhost,
-DATEADD(year, 5, created_at) created_at,
-DATEADD(year, 5, updated_at) updated_at
+MIN(DATEADD(year, 5, created_at),current_date) created_at,
+MIN(DATEADD(year, 5, updated_at),current_date) updated_at
 from
 raw_hosts__raw_hosts
 order by updated_at DESC
@@ -17,10 +17,9 @@ order by updated_at DESC
 --  id,
 --  name,
 --  is_superhost,
---  DATEADD(year, 5, created_at) created_at,
---  DATEADD(year, 5, updated_at) updated_at
+--  MIN(DATEADD(year, 5, created_at),current_date) created_at,
+--  MIN(DATEADD(year, 5, updated_at),current_date) updated_at
 --from
 --  raw_hosts__raw_hosts
 --order by updated_at DESC
---
 --</ORIGINAL_CODE>
