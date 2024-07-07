@@ -1,0 +1,26 @@
+version: 2
+models:
+  - name: test_data_retention
+    description: ""
+    config:
+      materialized: table
+      post_hook: []
+    tests: []
+    columns:
+      - name: created_at
+        type: TIMESTAMP
+        tests: []
+      - name: id
+        type: NUMBER
+        tests: []
+      - name: name
+        type: TEXT
+        tests: []
+      - name: updated_at
+        type: TIMESTAMP
+        tests: []
+      - name: is_superhost
+        type: TEXT
+        tests: []
+    meta:
+      model_tags: []
