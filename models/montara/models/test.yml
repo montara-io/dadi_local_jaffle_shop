@@ -11,7 +11,7 @@ models:
           \     {% elif target.name == dev %}
 
           \        \"DELETE FROM {{ this }} WHERE last_updated < DATEADD(day,
-          -{# START_stagingDataRetentionDays #}180{#
+          -{# START_stagingDataRetentionDays #}280{#
           END_stagingDataRetentionDays #}, CURRENT_DATE())\"
 
           \     \ 
@@ -19,7 +19,7 @@ models:
           \    {% elif target.name == prod %}
 
           \      \"DELETE FROM {{ this }} WHERE last_updated < DATEADD(day, -{#
-          START_productionDataRetentionDays #}30{#
+          START_productionDataRetentionDays #}7{#
           END_productionDataRetentionDays #}, CURRENT_DATE())\"
 
           \   \ 
@@ -49,5 +49,5 @@ models:
         - 1f9a9e04-9372-4923-8253-be425f9420b0
       incremental_column: updated_at
       data_retention_days:
-        staging: 180
-        production: 30
+        staging: 280
+        production: 7
