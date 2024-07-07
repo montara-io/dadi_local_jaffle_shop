@@ -8,7 +8,7 @@ models:
       post_hook:
         - "{% if True == False %}
 
-          \     {% if target.name == dev %}
+          \     {% elif target.name == dev %}
 
           \        \"DELETE FROM {{ this }} WHERE last_updated < DATEADD(day,
           -{# START_stagingDataRetentionDays #}180{#
@@ -47,7 +47,7 @@ models:
     meta:
       model_tags:
         - 1f9a9e04-9372-4923-8253-be425f9420b0
-      incremental_column: created_at
+      incremental_column: updated_at
       data_retention_days:
         staging: 180
         production: 30
