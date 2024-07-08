@@ -28,5 +28,5 @@ models:
       model_tags: []
       incremental_column: updated_at
       data_retention_days:
-        staging: 150
-        production: 12
+        staging: 15
+        production: 150
