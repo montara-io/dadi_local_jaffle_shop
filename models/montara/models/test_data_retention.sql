@@ -4,13 +4,11 @@
 WITH raw_hosts_augmented AS (SELECT * FROM {{ ref('raw_hosts_augmented') }})
 
 select
-*
-from
+* from
 raw_hosts_augmented
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 --select
---  *
---from
+--  * from
 --  raw_hosts_augmented
 --</ORIGINAL_CODE>
