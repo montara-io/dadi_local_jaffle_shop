@@ -13,9 +13,9 @@ models:
           \  {% if target.name == 'dev' %}
 
           \    {{log('Running retention policy for {{this}}. Staging retention
-          days: 180, Production retention days: 30.')}}
+          days: 30, Production retention days: 180.')}}
 
-          \    DELETE FROM {{this}} WHERE updated_at < DATEADD(day, -180,
+          \    DELETE FROM {{this}} WHERE updated_at < DATEADD(day, -30,
           CURRENT_DATE())
 
           \ \ 
@@ -23,9 +23,9 @@ models:
           \  {% elif target.name == 'prod' %}
 
           \    {{log('Running retention policy for {{this}}. Staging retention
-          days: 180, Production retention days: 30.')}}
+          days: 30, Production retention days: 180.')}}
 
-          \    DELETE FROM {{this}} WHERE updated_at < DATEADD(day, -30,
+          \    DELETE FROM {{this}} WHERE updated_at < DATEADD(day, -180,
           CURRENT_DATE())
 
           \ \ 
@@ -56,5 +56,5 @@ models:
       model_tags: []
       incremental_column: updated_at
       data_retention_days:
-        staging: 180
-        production: 30
+        staging: 30
+        production: 180
