@@ -16,7 +16,6 @@ from
 raw_hosts_augmented
 where
 updated_at is not null
-and created_at is not null
 ) AS montara_model
 --<INCREMENTAL>
 {% if is_incremental() %}
@@ -31,5 +30,4 @@ and created_at is not null
 --  raw_hosts_augmented
 --where
 --  updated_at is not null
---  and created_at is not null
 --</ORIGINAL_CODE>
