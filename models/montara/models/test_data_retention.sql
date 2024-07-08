@@ -3,7 +3,7 @@
 
   {{
     config(
-      post_hook=["\n  \n  {% if target.name == 'dev' %}\n    {{log('Running retention policy for {{this}}. Staging retention days: 180, Production retention days: 30.')}}\n    DELETE FROM {{this}} WHERE updated_at < DATEADD(day, -180, CURRENT_DATE())\n  \n  {% elif target.name == 'prod' %}\n    {{log('Running retention policy for {{this}}. Staging retention days: 180, Production retention days: 30.')}}\n    DELETE FROM {{this}} WHERE updated_at < DATEADD(day, -30, CURRENT_DATE())\n  \n  {% endif %}\n  "],  
+      post_hook=["\n  \n  {% if target.name == 'dev' %}\n    {{log('Running retention policy for {{this}}. Staging retention days: 180, Production retention days: 14.')}}\n    DELETE FROM {{this}} WHERE updated_at < DATEADD(day, -180, CURRENT_DATE())\n  \n  {% elif target.name == 'prod' %}\n    {{log('Running retention policy for {{this}}. Staging retention days: 180, Production retention days: 14.')}}\n    DELETE FROM {{this}} WHERE updated_at < DATEADD(day, -14, CURRENT_DATE())\n  \n  {% endif %}\n  "],  
     )
   }}
   
