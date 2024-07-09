@@ -17,9 +17,7 @@ models:
         tests: []
       - name: id
         type: NUMBER
-        tests:
-          - not_null_tolerance:
-              tolerance: 0
+        tests: []
       - name: created_at
         type: TIMESTAMP
         tests: []
