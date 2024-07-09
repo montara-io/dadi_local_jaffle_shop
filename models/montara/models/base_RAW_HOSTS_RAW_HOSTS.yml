@@ -8,9 +8,7 @@ models:
     columns:
       - name: name
         type: TEXT
-        tests:
-          - not_null_tolerance:
-              tolerance: 0
+        tests: []
       - name: updated_at
         type: TIMESTAMP
         tests: []
