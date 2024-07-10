@@ -1,14 +1,18 @@
 {% macro row_count() %}
-    {% set sql_statement %}
-            select count(*) from {{ this }}
-    {% endset %}
-    {{ print(query) }}
     {% if execute %}
-        {% set results = run_query(sql_statement) %}
-        {% set records = results.columns[0].values() %}
-    {% else %}
-        {% set records = [] %}
+        {% set row_count_query %}
+    SELECT
+        COUNT(*) AS row_count
+    FROM
+        {{ this }}
+
+        {% endset %}
+        {% set results = run_query(row_count_query) %}
+        {% set row_count = results.columns [0].values() [0] %}
+        {% set model_name = model.name %}
+        {{ log(
+            "ROW_COUNT_LOG|model:" ~ model_name ~ "|count:" ~ row_count,
+            info = True
+        ) }}
     {% endif %}
-    
-    {{ log("total rows count: " ~ records[0]) }}
 {% endmacro %}
