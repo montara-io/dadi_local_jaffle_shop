@@ -4,7 +4,6 @@ models:
     description: ""
     config:
       materialized: table
-      post_hook: []
     tests: []
     columns: []
     meta:
