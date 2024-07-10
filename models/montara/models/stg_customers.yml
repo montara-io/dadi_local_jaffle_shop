@@ -5,5 +5,17 @@ models:
     config:
       materialized: view
     tests: []
-    columns: []
-    meta: {}
+    columns:
+      - name: FIRST_NAME
+        type: TEXT
+        tests: []
+      - name: LAST_NAME
+        type: TEXT
+        tests: []
+      - name: CUSTOMER_ID
+        type: NUMBER
+        tests:
+          - not_null_tolerance:
+              tolerance: 0
+    meta:
+      model_tags: []
