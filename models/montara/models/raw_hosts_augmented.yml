@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: raw_hosts_augmented
+    description: ""
+    config:
+      materialized: table
+      post_hook: []
+    tests: []
+    columns: []
+    meta:
+      model_tags: []
