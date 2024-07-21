@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: test_py
+    description: ""
+    config:
+      materialized: table
+    tests: []
+    columns: []
+    meta:
+      model_tags: []
