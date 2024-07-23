@@ -5,6 +5,21 @@ models:
     config:
       materialized: table
     tests: []
-    columns: []
+    columns:
+      - name: is_superhost
+        type: TEXT
+        tests: []
+      - name: created_at
+        type: TIMESTAMP
+        tests: []
+      - name: name
+        type: TEXT
+        tests: []
+      - name: id
+        type: NUMBER
+        tests: []
+      - name: updated_at
+        type: TIMESTAMP
+        tests: []
     meta:
       model_tags: []
