@@ -11,8 +11,7 @@ LEAST(DATEADD(year, 3, created_at), CURRENT_DATE) AS created_at,
 LEAST(DATEADD(year, 3, updated_at), CURRENT_DATE) AS updated_at
 FROM
 raw_hosts__raw_hosts
-ORDER BY
-updated_at desc
+ORDER BY updated_at desc
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 --SELECT
@@ -23,6 +22,5 @@ updated_at desc
 --  LEAST(DATEADD(year, 3, updated_at), CURRENT_DATE) AS updated_at
 --FROM
 --  raw_hosts__raw_hosts
---ORDER BY
---  updated_at desc
+--ORDER BY updated_at desc
 --</ORIGINAL_CODE>
