@@ -22,5 +22,6 @@ ORDER BY updated_at desc
 --  LEAST(DATEADD(year, 3, updated_at), CURRENT_DATE) AS updated_at
 --FROM
 --  raw_hosts__raw_hosts
+--  
 --ORDER BY updated_at desc
 --</ORIGINAL_CODE>

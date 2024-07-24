@@ -11,6 +11,8 @@ models:
         tests: []
       - name: created_at
         type: TIMESTAMP
+        description: Creation date of the record, capped at a maximum of 3 years from
+          the original creation date.
         tests:
           - not_null_tolerance:
               tolerance: 0
@@ -19,6 +21,7 @@ models:
         tests: []
       - name: id
         type: NUMBER
+        description: Unique identifier for the host.
         tests: []
       - name: updated_at
         type: TIMESTAMP
