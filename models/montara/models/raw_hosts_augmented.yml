@@ -11,7 +11,9 @@ models:
         tests: []
       - name: created_at
         type: TIMESTAMP
-        tests: []
+        tests:
+          - not_null_tolerance:
+              tolerance: 0
       - name: name
         type: TEXT
         tests: []
