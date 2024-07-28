@@ -19,6 +19,8 @@ models:
         tests: []
       - name: room_type
         type: TEXT
+        description: Type of room offered in the listing, such as entire home/apt,
+          private room, or shared room.
         tests: []
       - name: id
         type: NUMBER
@@ -26,6 +28,7 @@ models:
         tests: []
       - name: price
         type: TEXT
+        description: The nightly price set for renting out the listing.
         tests: []
       - name: name
         type: TEXT
@@ -33,6 +36,8 @@ models:
         tests: []
       - name: updated_at
         type: TIMESTAMP
+        description: Timestamp indicating the last time the listing information was
+          updated in the database.
         tests: []
       - name: listing_url
         type: TEXT
