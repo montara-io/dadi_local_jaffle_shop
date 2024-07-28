@@ -25,5 +25,4 @@ WHERE updated_at >= (SELECT max(updated_at) FROM {{ this }})
 --  
 --where
 --  id is not null
---
 --</ORIGINAL_CODE>
