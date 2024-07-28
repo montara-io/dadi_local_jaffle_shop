@@ -49,5 +49,5 @@ models:
         tests: []
     meta:
       model_tags:
-        - 9a684041-cebe-4a73-a4a2-f454d305813e
+        - 37351916-6210-4099-a2f1-16f0cb67523b
       incremental_column: updated_at
