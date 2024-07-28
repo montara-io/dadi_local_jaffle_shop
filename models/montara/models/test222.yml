@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: test222
+    description: ""
+    config:
+      materialized: table
+    tests: []
+    columns: []
+    meta:
+      model_tags: []
