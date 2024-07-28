@@ -23,7 +23,6 @@ models:
         tests: []
       - name: id
         type: NUMBER
-        description: Unique identifier for the host.
         tests: []
       - name: updated_at
         type: TIMESTAMP
