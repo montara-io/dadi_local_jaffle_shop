@@ -5,7 +5,6 @@ with source as (
     our data in this project
     #}
     select * from {{ ref('raw_customers') }}
-
 ), 
 
 renamed as (
