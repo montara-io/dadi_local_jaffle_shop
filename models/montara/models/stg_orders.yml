@@ -8,17 +8,21 @@ models:
     columns:
       - name: ORDER_ID
         type: NUMBER
+        description: Unique identifier for each order.
         tests: []
       - name: STATUS
         type: TEXT
+        description: Current processing status of the order.
         tests: []
       - name: CUSTOMER_ID
         type: NUMBER
+        description: Unique identifier for the customer who placed the order.
         tests:
           - not_null_tolerance:
               tolerance: 0
       - name: ORDER_DATE
         type: DATE
+        description: The date and time when the order was placed.
         tests: []
     meta:
       model_tags: []
