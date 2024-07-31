@@ -4,33 +4,7 @@ models:
     description: ""
     config:
       materialized: table
-      schema: "{{ 'test_override_schema' if target.name == 'dev' else
-        'prod_override_schema' }}"
     tests: []
-    columns:
-      - name: id
-        type: NUMBER
-        description: t
-        tests: []
-      - name: is_superhost
-        type: TEXT
-        description: A boolean value indicating whether the host is considered a superhost.
-        tests: []
-      - name: created_at
-        type: TIMESTAMP
-        description: The timestamp of when the host's information was initially created
-          in the database.
-        tests: []
-      - name: updated_at
-        type: TIMESTAMP
-        description: The timestamp of when the host's information was last updated.
-        tests: []
-      - name: name
-        type: TEXT
-        description: The name of the host.
-        tests: []
+    columns: []
     meta:
-      schema:
-        production: prod_override_schema
-        test: test_override_schema
       model_tags: []
