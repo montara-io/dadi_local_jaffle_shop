@@ -1,0 +1,22 @@
+version: 2
+models:
+  - name: stg_payments
+    description: ""
+    config:
+      materialized: view
+    tests: []
+    columns:
+      - name: PAYMENT_ID
+        type: NUMBER
+        tests: []
+      - name: ORDER_ID
+        type: NUMBER
+        tests: []
+      - name: PAYMENT_METHOD
+        type: TEXT
+        tests: []
+      - name: AMOUNT
+        type: NUMBER
+        tests: []
+    meta:
+      model_tags: []
