@@ -5,7 +5,7 @@ WITH RAW_LISTINGS__RAW_LISTINGS AS ( SELECT * FROM {{ source('RAW_LISTINGS', 'RA
 
 SELECT * FROM ( 
 select
-id as "actual list price: list price*quantity"
+id
 from
 raw_listings__raw_listings
 where
@@ -19,7 +19,7 @@ WHERE updated_at >= (SELECT max(updated_at) FROM {{ this }})
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 --select
---  id as "actual list price: list price*quantity"
+--  id
 --from
 --  raw_listings__raw_listings 
 --where
