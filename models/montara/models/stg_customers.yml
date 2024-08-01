@@ -8,12 +8,15 @@ models:
     columns:
       - name: FIRST_NAME
         type: TEXT
+        description: The given name or forename of the customer.
         tests: []
       - name: LAST_NAME
         type: TEXT
+        description: The family name or surname of the customer.
         tests: []
       - name: CUSTOMER_ID
         type: NUMBER
+        description: The unique identifier for the customer.
         tests:
           - not_null_tolerance:
               tolerance: 0
