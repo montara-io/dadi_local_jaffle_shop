@@ -5,7 +5,7 @@ sources:
     database: airbnb
     tables:
       - name: RAW_REVIEWS
-        description: ""
+        description: test
         columns:
           - name: comments
             type: TEXT
