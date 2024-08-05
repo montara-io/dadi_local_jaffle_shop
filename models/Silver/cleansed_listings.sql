@@ -24,4 +24,7 @@ WHERE updated_at >= (SELECT max(updated_at) FROM {{ this }})
 --  raw_listings__raw_listings 
 --where
 --  id is not null
+--
+--
+--
 --</ORIGINAL_CODE>
