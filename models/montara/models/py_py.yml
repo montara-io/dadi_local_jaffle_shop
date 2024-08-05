@@ -1,0 +1,12 @@
+version: 2
+models:
+  - name: py_py
+    description: ""
+    config:
+      materialized: table
+    tests: []
+    columns: []
+    meta:
+      model_tags:
+        - a364d3a9-3dbd-47fb-bef6-a42bb084cdbc
+        - 1f9a9e04-9372-4923-8253-be425f9420b0

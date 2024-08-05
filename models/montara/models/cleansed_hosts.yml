@@ -1,0 +1,9 @@
+version: 2
+models:
+  - name: cleansed_hosts
+    description: ""
+    config:
+      materialized: table
+    tests: []
+    columns: []
+    meta: {}

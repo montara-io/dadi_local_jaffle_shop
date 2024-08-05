@@ -1,15 +1,51 @@
-{% test accepted_values_tolerance(model, column_name , tolerance, value) %}
-    
-    WITH AcceptedValuesCounts AS (
-        SELECT *
-        FROM {{ model }}
-        where {{ column_name }} not in ('{{ value | join("', '") }}')
-    ),
-    AllValuesCounts AS (
-        SELECT count(*)
-        FROM {{ model }}
+{% test accepted_values_tolerance(
+    model,
+    column_name,
+    tolerance,
+    value
+) %}
+{% if tolerance == 0 %}
+SELECT
+    *
+FROM
+    {{ model }}
+WHERE
+    {{ column_name }} NOT IN (
+        '{{ value | join("',
+        '") }}'
     )
-    SELECT * FROM AcceptedValuesCounts
-    WHERE ((select COUNT(*) from AcceptedValuesCounts) * 100.0) / (select * from AllValuesCounts) >= {{ tolerance }}
+{% else %}
+    WITH unaccepted_percentage AS (
+        SELECT
+            (COUNT(*) * 100.0) / (
+                SELECT
+                    COUNT(*)
+                FROM
+                    {{ model }}
+            ) AS percentage
+        FROM
+            {{ model }}
+        WHERE
+            {{ column_name }} NOT IN (
+                '{{ value | join("',
+                '") }}'
+            )
+    )
+SELECT
+    *
+FROM
+    {{ model }}
+WHERE
+    {{ column_name }} NOT IN (
+        '{{ value | join("',
+        '") }}'
+    )
+    AND (
+        SELECT
+            percentage
+        FROM
+            unaccepted_percentage
+    ) > {{ tolerance }}
+{% endif %}
 
 {% endtest %}

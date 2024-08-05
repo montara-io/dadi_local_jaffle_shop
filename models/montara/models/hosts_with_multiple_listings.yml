@@ -1,7 +1,6 @@
 version: 2
 models:
-  - name: cleansed_listings
-    description: cleansed listings description
+  - name: hosts_with_multiple_listings
     config:
       materialized: incremental
       unique_key:
