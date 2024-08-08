@@ -1,6 +1,7 @@
 version: 2
 models:
   - name: hosts_with_multiple_listings
+    description: ""
     config:
       materialized: incremental
       unique_key:
