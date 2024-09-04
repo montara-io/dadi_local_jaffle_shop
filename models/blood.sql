@@ -7,5 +7,5 @@ select * from cleansed_hosts
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 ---- Enter your SQL select statement here
---select * from cleansed_hosts 
+--select * from cleansed_hosts
 --</ORIGINAL_CODE>
