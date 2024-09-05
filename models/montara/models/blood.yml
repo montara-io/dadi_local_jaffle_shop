@@ -1,7 +1,7 @@
 version: 2
 models:
   - name: blood
-    description: ""
+    description: Retrieves all columns for every record from the cleansed_hosts table.
     config:
       materialized: table
     tests: []
