@@ -10,9 +10,7 @@ sources:
           - name: comments
             type: TEXT
             description: The textual feedback provided by the reviewer.
-            tests:
-              - not_null_tolerance:
-                  tolerance: 0
+            tests: []
           - name: sentiment
             type: TEXT
             description: The sentiment rating derived from the comments, indicating
@@ -21,7 +19,9 @@ sources:
           - name: listing_id
             type: NUMBER
             description: The unique identifier of the property or listing that was reviewed.
-            tests: []
+            tests:
+              - not_null_tolerance:
+                  tolerance: 0
           - name: reviewer_name
             type: TEXT
             description: The name of the user who submitted the review.
