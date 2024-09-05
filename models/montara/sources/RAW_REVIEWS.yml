@@ -5,12 +5,14 @@ sources:
     database: airbnb
     tables:
       - name: RAW_REVIEWS
-        description: tests
+        description: ""
         columns:
           - name: comments
             type: TEXT
             description: The textual feedback provided by the reviewer.
-            tests: []
+            tests:
+              - not_null_tolerance:
+                  tolerance: 0
           - name: sentiment
             type: TEXT
             description: The sentiment rating derived from the comments, indicating
