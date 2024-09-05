@@ -15,12 +15,15 @@ sources:
             tests: []
           - name: LISTING_ID
             type: NUMBER
+            description: The unique identifier of the listing or item that the review is
+              about.
             tests: []
           - name: REVIEW_TEXT
             type: TEXT
             tests: []
           - name: REVIEW_DATE
             type: TIMESTAMP
+            description: The date when the review was posted.
             tests: []
           - name: REVIEW_ID
             type: TEXT
