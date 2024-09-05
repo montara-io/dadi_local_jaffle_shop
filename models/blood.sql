@@ -4,8 +4,9 @@
 WITH cleansed_hosts AS (SELECT * FROM {{ ref('cleansed_hosts') }})
 
 select * from cleansed_hosts
+where ID is not null
 --</DBT_CODE>
 --<ORIGINAL_CODE>
----- Enter your SQL select statement here
 --select * from cleansed_hosts
+--where ID is not null
 --</ORIGINAL_CODE>
