@@ -1,0 +1,30 @@
+version: 2
+sources:
+  - name: MART_FULLMOON_REVIEWS
+    schema: DEV
+    database: airbnb
+    tables:
+      - name: MART_FULLMOON_REVIEWS
+        description: ""
+        columns:
+          - name: REVIEWER_NAME
+            type: TEXT
+            tests: []
+          - name: REVIEW_SENTIMENT
+            type: TEXT
+            tests: []
+          - name: REVIEW_TEXT
+            type: TEXT
+            tests: []
+          - name: LISTING_ID
+            type: NUMBER
+            tests: []
+          - name: REVIEW_DATE
+            type: TIMESTAMP
+            tests: []
+          - name: IS_FULL_MOON
+            type: TEXT
+            tests: []
+          - name: REVIEW_ID
+            type: TEXT
+            tests: []
