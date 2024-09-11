@@ -7,7 +7,8 @@ with source as (
     select * from {{ ref('raw_payments') }}
 ),
 
-renamed as (
+renamed 
+as (
 
     select
         id as payment_id,
