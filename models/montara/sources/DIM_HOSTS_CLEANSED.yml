@@ -1,0 +1,24 @@
+version: 2
+sources:
+  - name: DIM_HOSTS_CLEANSED
+    schema: DEV
+    database: airbnb
+    tables:
+      - name: DIM_HOSTS_CLEANSED
+        description: ""
+        columns:
+          - name: IS_SUPERHOST
+            type: TEXT
+            tests: []
+          - name: HOST_NAME
+            type: TEXT
+            tests: []
+          - name: UPDATED_AT
+            type: TIMESTAMP
+            tests: []
+          - name: HOST_ID
+            type: NUMBER
+            tests: []
+          - name: CREATED_AT
+            type: TIMESTAMP
+            tests: []

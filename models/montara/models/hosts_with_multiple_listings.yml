@@ -1,52 +1,14 @@
 version: 2
 models:
   - name: hosts_with_multiple_listings
+    description: ""
     config:
-      materialized: incremental
-      unique_key:
-        - id
-      incremental_strategy: merge
+      materialized: table
     tests: []
     columns:
-      - name: created_at
-        type: TIMESTAMP
-        description: The date and time when the listing was created.
-        tests: []
-      - name: host_id
+      - name: "actual list price: list price*quantity"
         type: NUMBER
-        description: The unique identifier of the host who owns the listing.
-        tests: []
-      - name: room_type
-        type: TEXT
-        description: Type of room offered in the listing, such as entire home/apt,
-          private room, or shared room.
-        tests: []
-      - name: id
-        type: NUMBER
-        description: The unique identifier of the listing.
-        tests: []
-      - name: price
-        type: TEXT
-        description: The nightly price set for renting out the listing.
-        tests: []
-      - name: name
-        type: TEXT
-        description: The name or title of the listing as provided by the host.
-        tests: []
-      - name: updated_at
-        type: TIMESTAMP
-        description: Timestamp indicating the last time the listing information was
-          updated in the database.
-        tests: []
-      - name: listing_url
-        type: TEXT
-        description: The URL linking directly to the listing's webpage.
-        tests: []
-      - name: minimum_nights
-        type: NUMBER
-        description: The minimum number of nights a guest must book the listing for.
         tests: []
     meta:
       model_tags:
         - 37351916-6210-4099-a2f1-16f0cb67523b
-      incremental_column: updated_at

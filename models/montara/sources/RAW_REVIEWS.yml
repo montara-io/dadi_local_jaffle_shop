@@ -5,7 +5,7 @@ sources:
     database: airbnb
     tables:
       - name: RAW_REVIEWS
-        description: test
+        description: ""
         columns:
           - name: comments
             type: TEXT
@@ -19,7 +19,9 @@ sources:
           - name: listing_id
             type: NUMBER
             description: The unique identifier of the property or listing that was reviewed.
-            tests: []
+            tests:
+              - not_null_tolerance:
+                  tolerance: 0
           - name: reviewer_name
             type: TEXT
             description: The name of the user who submitted the review.

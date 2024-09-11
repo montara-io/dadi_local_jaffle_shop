@@ -6,10 +6,9 @@ List sources and models in the function definition as below
 def py_py(sourceA, modelA)  
 '''
 def py_py(orders):
-  return model
+  return orders
 #</ORIGINAL_CODE>
 def model(dbt, session):
     orders = dbt.ref('orders')
     result = py_py(orders)
-    
     return result

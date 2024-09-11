@@ -6,10 +6,9 @@ List sources and models in the function definition as below
 def my_py(sourceA, modelA)  
 '''
 def my_py(cleansed_listings):
-  return model
+  return cleansed_listings
 #</ORIGINAL_CODE>
 def model(dbt, session):
     cleansed_listings = dbt.ref('cleansed_listings')
     result = my_py(cleansed_listings)
-    
     return result

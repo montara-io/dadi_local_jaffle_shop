@@ -1,0 +1,33 @@
+version: 2
+sources:
+  - name: DIM_LISTINGS_CLEANSED
+    schema: DEV
+    database: airbnb
+    tables:
+      - name: DIM_LISTINGS_CLEANSED
+        description: ""
+        columns:
+          - name: MINIMUM_NIGHTS
+            type: NUMBER
+            tests: []
+          - name: HOST_ID
+            type: NUMBER
+            tests: []
+          - name: UPDATED_AT
+            type: TIMESTAMP
+            tests: []
+          - name: LISTING_ID
+            type: NUMBER
+            tests: []
+          - name: PRICE
+            type: NUMBER
+            tests: []
+          - name: ROOM_TYPE
+            type: TEXT
+            tests: []
+          - name: LISTING_NAME
+            type: TEXT
+            tests: []
+          - name: CREATED_AT
+            type: TIMESTAMP
+            tests: []
