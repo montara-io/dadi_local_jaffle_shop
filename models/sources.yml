@@ -1,9 +1,4 @@
 version: 2
 
 sources:
-  - name: RAW_LISTINGS
-    schema: RAW
-    database: airbnb
-    tables:
-      - name: RAW_LISTINGS
         
