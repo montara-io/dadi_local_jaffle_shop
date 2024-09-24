@@ -31,3 +31,4 @@ sources:
           - name: CREATED_AT
             type: TIMESTAMP
             tests: []
+    loaded_at_field: CREATED_AT
