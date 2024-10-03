@@ -9,6 +9,7 @@ orders as (
     select * from {{ ref('stg_orders') }}
 
 ),
+-- Comment Dadi
 
 payments as (
     select * from {{ ref('stg_payments') }}
