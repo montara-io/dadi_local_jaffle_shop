@@ -3,10 +3,16 @@
 
 WITH cleansed_hosts AS (SELECT * FROM {{ ref('cleansed_hosts') }})
 
-select * from cleansed_hosts
-where ID is not null
+select
+*
+from
+cleansed_hosts
 --</DBT_CODE>
 --<ORIGINAL_CODE>
---select * from cleansed_hosts
---where ID is not null
+--select
+--  *
+--from
+--  cleansed_hosts
+--
+--  -- This is new
 --</ORIGINAL_CODE>
