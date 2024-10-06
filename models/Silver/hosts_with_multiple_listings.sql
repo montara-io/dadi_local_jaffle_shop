@@ -7,10 +7,13 @@ select
 id as "actual list price: list price*quantity"
 from
 raw_listings__raw_listings
+limit 10000
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 --select
 --  id as "actual list price: list price*quantity"
 --from
 --  raw_listings__raw_listings
+--
+--  limit 10000
 --</ORIGINAL_CODE>
