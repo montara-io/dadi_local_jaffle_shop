@@ -1,11 +1,11 @@
 version: 2
 sources:
   - name: DIM_HOSTS_CLEANSED
-    schema: DEV
-    database: airbnb
+    schema: asdasdf
+    database: some_db
     tables:
-      - name: DIM_HOSTS_CLEANSED
-        description: ""
+      - name: asdfasdf
+        description: test desc
         columns:
           - name: IS_SUPERHOST
             type: TEXT
