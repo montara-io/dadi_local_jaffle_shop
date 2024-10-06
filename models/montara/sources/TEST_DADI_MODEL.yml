@@ -5,7 +5,7 @@ sources:
     database: airbnb
     tables:
       - name: TEST_DADI_MODEL
-        description: ""
+        description: test
         columns:
           - name: UPDATED_AT
             type: TIMESTAMP
@@ -22,3 +22,8 @@ sources:
           - name: CREATED_AT
             type: TIMESTAMP
             tests: []
+    freshness:
+      error_after:
+        count: 24
+        period: hour
+    loaded_at_field: UPDATED_AT
