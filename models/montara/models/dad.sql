@@ -3,8 +3,14 @@
 
 WITH blood AS (SELECT * FROM {{ ref('blood') }})
 
-select * from blood
+select
+*
+from
+blood
 --</DBT_CODE>
 --<ORIGINAL_CODE>
---select * from blood 
+--select
+--  *
+--from
+--  blood
 --</ORIGINAL_CODE>
