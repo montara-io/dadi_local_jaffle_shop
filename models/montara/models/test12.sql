@@ -7,5 +7,4 @@ select * from cleansed_hosts
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 --select * from cleansed_hosts
-----New stuff
 --</ORIGINAL_CODE>
