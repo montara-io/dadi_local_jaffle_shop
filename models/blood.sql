@@ -12,5 +12,5 @@ cleansed_hosts
 --select
 --  *
 --from
---  cleansed_hosts
+--  cleansed_hosts 
 --</ORIGINAL_CODE>
