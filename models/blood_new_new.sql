@@ -13,6 +13,4 @@ cleansed_hosts
 --  *
 --from
 --  cleansed_hosts
---
---  -- This is new
 --</ORIGINAL_CODE>

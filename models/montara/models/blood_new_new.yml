@@ -1,7 +1,6 @@
 version: 2
 models:
-  - name: blood
-    description: ""
+  - name: blood_new_new
     config:
       materialized: table
     tests: []
