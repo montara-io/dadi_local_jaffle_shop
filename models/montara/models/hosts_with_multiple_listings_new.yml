@@ -1,0 +1,13 @@
+version: 2
+models:
+  - name: hosts_with_multiple_listings_new
+    config:
+      materialized: table
+    tests: []
+    columns:
+      - name: "actual list price: list price*quantity"
+        type: NUMBER
+        tests: []
+    meta:
+      model_tags:
+        - 37351916-6210-4099-a2f1-16f0cb67523b
