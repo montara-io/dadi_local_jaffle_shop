@@ -1,0 +1,9 @@
+version: 2
+models:
+  - name: new_dadi_new
+    config:
+      materialized: table
+    tests: []
+    columns: []
+    meta:
+      model_tags: []
