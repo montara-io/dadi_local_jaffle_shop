@@ -1,6 +1,7 @@
 version: 2
 models:
   - name: test_new
+    description: ""
     config:
       materialized: table
     tests: []
