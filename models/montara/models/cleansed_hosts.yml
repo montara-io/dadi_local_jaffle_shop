@@ -1,9 +1,30 @@
 version: 2
 models:
-  - name: cleansed_hosts
+  - name: "cleansed_hosts"
     description: ""
     config:
-      materialized: table
+      materialized: "table"
     tests: []
-    columns: []
-    meta: {}
+    columns:
+      - name: "ID"
+        type: "NUMBER"
+        tests: []
+      - name: "NAME"
+        type: "TEXT"
+        tests: []
+      - name: "IS_SUPERHOST"
+        type: "TEXT"
+        tests: []
+      - name: "CREATED_AT"
+        type: "TIMESTAMP"
+        tests: []
+      - name: "UPDATED_AT"
+        type: "TIMESTAMP"
+        tests: []
+    meta:
+      model_tags: []
+      incremental_config:
+        origin_name: null
+        origin_column: null
+        target_column: ""
+        window_size_days: null
