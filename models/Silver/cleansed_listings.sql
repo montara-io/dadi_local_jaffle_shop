@@ -13,7 +13,7 @@ id is not null
 ) AS montara_model
 --<INCREMENTAL>
 {% if is_incremental() %}
-WHERE updated_at >= (SELECT max(updated_at) FROM {{ this }})
+  WHERE updated_at >= (SELECT max(updated_at) FROM {{ this }})
 {% endif %}
 --</INCREMENTAL>
 --</DBT_CODE>
