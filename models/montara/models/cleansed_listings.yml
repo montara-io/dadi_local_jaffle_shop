@@ -22,25 +22,20 @@ models:
       - name: "host_id"
         type: "NUMBER"
         description: "The unique identifier of the host who owns the listing."
-        tests:
-          - range_tolerance:
-              min: 3
-              max: 10
-              tolerance: 0
+        tests: []
       - name: "room_type"
         type: "TEXT"
         description: "Type of room offered in the listing, such as entire home/apt,
           private room, or shared room."
-        tests:
-          - accepted_values_tolerance:
-              value:
-                - "x"
-                - "e"
-              tolerance: 0
+        tests: []
       - name: "id"
         type: "NUMBER"
         description: "The unique identifier of the listing."
-        tests: []
+        tests:
+          - range_tolerance:
+              min: 0
+              max: 3
+              tolerance: 0
       - name: "price"
         type: "TEXT"
         description: "The nightly price set for renting out the listing."
@@ -58,12 +53,8 @@ models:
         type: "TEXT"
         description: "The URL linking directly to the listing's webpage."
         tests:
-          - accepted_values_tolerance:
-              value:
-                - "w"
-                - "asldkfj"
-                - "asdlfkj"
-              tolerance: 7
+          - not_null_tolerance:
+              tolerance: 0
       - name: "minimum_nights"
         type: "NUMBER"
         description: "The minimum number of nights a guest must book the listing for."
