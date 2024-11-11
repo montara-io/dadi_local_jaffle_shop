@@ -31,7 +31,12 @@ models:
         type: "TEXT"
         description: "Type of room offered in the listing, such as entire home/apt,
           private room, or shared room."
-        tests: []
+        tests:
+          - accepted_values_tolerance:
+              value:
+                - "x"
+                - "e"
+              tolerance: 0
       - name: "id"
         type: "NUMBER"
         description: "The unique identifier of the listing."
@@ -58,11 +63,15 @@ models:
                 - "w"
                 - "asldkfj"
                 - "asdlfkj"
-              tolerance: 0
+              tolerance: 7
       - name: "minimum_nights"
         type: "NUMBER"
         description: "The minimum number of nights a guest must book the listing for."
-        tests: []
+        tests:
+          - range_tolerance:
+              min: 0
+              max: 0
+              tolerance: 0
     meta:
       schema:
         production: "prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
