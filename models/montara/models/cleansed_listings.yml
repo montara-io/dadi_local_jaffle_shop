@@ -35,7 +35,7 @@ models:
           - range_tolerance:
               min: 0
               max: 3
-              tolerance: 0
+              tolerance: 4
       - name: "price"
         type: "TEXT"
         description: "The nightly price set for renting out the listing."
