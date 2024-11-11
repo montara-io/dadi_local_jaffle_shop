@@ -34,8 +34,8 @@ models:
         tests:
           - range_tolerance:
               min: 0
-              max: 3
-              tolerance: 4
+              max: 2
+              tolerance: 0
       - name: "price"
         type: "TEXT"
         description: "The nightly price set for renting out the listing."
@@ -54,6 +54,12 @@ models:
         description: "The URL linking directly to the listing's webpage."
         tests:
           - not_null_tolerance:
+              tolerance: 0
+          - unique_tolerance:
+              tolerance: 0
+          - accepted_values_tolerance:
+              value:
+                - "test"
               tolerance: 0
       - name: "minimum_nights"
         type: "NUMBER"
