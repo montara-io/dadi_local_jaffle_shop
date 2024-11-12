@@ -8,8 +8,6 @@ select
 *
 from
 RAW_LISTINGS__RAW_LISTINGS
-where
-id is not null
 ) AS montara_model
 --<INCREMENTAL>
 {% if is_incremental() %}
@@ -22,6 +20,5 @@ id is not null
 --  *
 --from
 --  RAW_LISTINGS__RAW_LISTINGS
---where
---  id is not null
+--
 --</ORIGINAL_CODE>
