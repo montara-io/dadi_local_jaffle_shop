@@ -17,58 +17,49 @@ models:
     columns:
       - name: "created_at"
         type: "TIMESTAMP"
-        description: "The date and time when the listing was created."
-        tests: []
+        tests:
+          - not_null_tolerance:
+              tolerance: 0
       - name: "host_id"
         type: "NUMBER"
-        description: "The unique identifier of the host who owns the listing."
-        tests: []
-      - name: "room_type"
-        type: "TEXT"
-        description: "Type of room offered in the listing, such as entire home/apt,
-          private room, or shared room."
-        tests: []
-      - name: "id"
-        type: "NUMBER"
-        description: "The unique identifier of the listing."
-        tests:
-          - range_tolerance:
-              min: 0
-              max: 2
-              tolerance: 0
-      - name: "price"
-        type: "TEXT"
-        description: "The nightly price set for renting out the listing."
-        tests: []
-      - name: "name"
-        type: "TEXT"
-        description: "The name or title of the listing as provided by the host."
-        tests: []
-      - name: "updated_at"
-        type: "TIMESTAMP"
-        description: "Timestamp indicating the last time the listing information was
-          updated in the database."
-        tests: []
-      - name: "listing_url"
-        type: "TEXT"
-        description: "The URL linking directly to the listing's webpage."
         tests:
           - not_null_tolerance:
               tolerance: 0
           - unique_tolerance:
               tolerance: 0
-          - accepted_values_tolerance:
-              value:
-                - "test"
+      - name: "room_type"
+        type: "TEXT"
+        tests:
+          - not_null_tolerance:
+              tolerance: 0
+      - name: "id"
+        type: "NUMBER"
+        tests: []
+      - name: "price"
+        type: "TEXT"
+        tests:
+          - not_null_tolerance:
+              tolerance: 0
+      - name: "name"
+        type: "TEXT"
+        tests:
+          - not_null_tolerance:
+              tolerance: 0
+      - name: "updated_at"
+        type: "TIMESTAMP"
+        tests:
+          - not_null_tolerance:
+              tolerance: 0
+      - name: "listing_url"
+        type: "TEXT"
+        tests:
+          - not_null_tolerance:
+              tolerance: 0
+          - unique_tolerance:
               tolerance: 0
       - name: "minimum_nights"
         type: "NUMBER"
-        description: "The minimum number of nights a guest must book the listing for."
-        tests:
-          - range_tolerance:
-              min: 0
-              max: 0
-              tolerance: 0
+        tests: []
     meta:
       schema:
         production: "prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
