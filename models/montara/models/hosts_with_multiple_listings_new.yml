@@ -1,7 +1,6 @@
 version: 2
 models:
-  - name: hosts_with_multiple_listings
-    description: ""
+  - name: hosts_with_multiple_listings_new
     config:
       materialized: table
     tests: []

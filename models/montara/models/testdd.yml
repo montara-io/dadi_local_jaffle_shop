@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: test
+  - name: testdd
     description: ""
     config:
       materialized: table

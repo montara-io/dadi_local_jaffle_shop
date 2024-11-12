@@ -3,8 +3,19 @@ models:
   - name: test222
     description: ""
     config:
-      materialized: table
+      materialized: incremental
+      unique_key:
+        - CREATED_AT
+        - ID
+      incremental_strategy: merge
     tests: []
-    columns: []
+    columns:
+      - name: ID
+        type: NUMBER
+        tests: []
+      - name: CREATED_AT
+        type: TIMESTAMP
+        tests: []
     meta:
       model_tags: []
+      incremental_column: CREATED_AT

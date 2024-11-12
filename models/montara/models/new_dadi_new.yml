@@ -1,7 +1,6 @@
 version: 2
 models:
-  - name: test
-    description: ""
+  - name: new_dadi_new
     config:
       materialized: table
     tests: []
