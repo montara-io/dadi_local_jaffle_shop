@@ -3,10 +3,7 @@ models:
   - name: "cleansed_listings"
     description: "cleansed listings description"
     config:
-      materialized: "incremental"
-      unique_key:
-        - "id"
-      incremental_strategy: "merge"
+      materialized: "table"
       schema: "{{ 'prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
         prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
         prod_e5jj6ggu_ezztt_com' if target.name == 'dev' else
@@ -32,9 +29,6 @@ models:
         tests:
           - not_null_tolerance:
               tolerance: 0
-      - name: "id"
-        type: "NUMBER"
-        tests: []
       - name: "price"
         type: "TEXT"
         tests:
@@ -59,7 +53,11 @@ models:
               tolerance: 0
       - name: "minimum_nights"
         type: "NUMBER"
-        tests: []
+        tests:
+          - range_tolerance:
+              min: 1
+              max: 0
+              tolerance: 0
     meta:
       schema:
         production: "prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
@@ -71,7 +69,7 @@ models:
       model_tags:
         - "37351916-6210-4099-a2f1-16f0cb67523b"
       incremental_config:
-        origin_name: null
+        origin_name: "RAW_LISTINGS__RAW_LISTINGS"
         origin_column: null
-        target_column: "updated_at"
+        target_column: ""
         window_size_days: null
