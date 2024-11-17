@@ -7,10 +7,14 @@ select
 *
 from
 RAW_LISTINGS__RAW_LISTINGS
+limit
+100
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 --select
 --  *
 --from
 --  RAW_LISTINGS__RAW_LISTINGS
+--limit
+--  100
 --</ORIGINAL_CODE>
