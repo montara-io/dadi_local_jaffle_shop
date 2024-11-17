@@ -58,6 +58,9 @@ models:
               min: 1
               max: 0
               tolerance: 0
+      - name: "id"
+        type: "NUMBER"
+        tests: []
     meta:
       schema:
         production: "prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
