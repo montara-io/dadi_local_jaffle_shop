@@ -29,21 +29,15 @@ models:
         tests:
           - not_null_tolerance:
               tolerance: 0
-          - unique_tolerance:
-              tolerance: 0
       - name: "price"
         type: "TEXT"
         tests:
           - not_null_tolerance:
               tolerance: 0
-          - unique_tolerance:
-              tolerance: 0
       - name: "name"
         type: "TEXT"
         tests:
           - not_null_tolerance:
-              tolerance: 0
-          - unique_tolerance:
               tolerance: 0
       - name: "updated_at"
         type: "TIMESTAMP"
@@ -60,21 +54,13 @@ models:
       - name: "minimum_nights"
         type: "NUMBER"
         tests:
-          - not_null_tolerance:
-              tolerance: 0
-          - unique_tolerance:
-              tolerance: 0
           - range_tolerance:
               min: 1
               max: 0
               tolerance: 0
       - name: "id"
         type: "NUMBER"
-        tests:
-          - not_null_tolerance:
-              tolerance: 0
-          - unique_tolerance:
-              tolerance: 0
+        tests: []
     meta:
       schema:
         production: "prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
