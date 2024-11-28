@@ -8,15 +8,13 @@ select
 from
 RAW_LISTINGS__RAW_LISTINGS
 limit
-1000
+100
 --</DBT_CODE>
 --<ORIGINAL_CODE>
----- new
---
 --select
 --  *
 --from
 --  RAW_LISTINGS__RAW_LISTINGS
 --limit
---  1000
+--  100
 --</ORIGINAL_CODE>
