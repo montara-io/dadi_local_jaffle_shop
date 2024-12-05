@@ -60,7 +60,11 @@ models:
               tolerance: 0
       - name: "id"
         type: "NUMBER"
-        tests: []
+        tests:
+          - range_tolerance:
+              min: 0
+              max: 100000
+              tolerance: 0
     meta:
       schema:
         production: "prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
