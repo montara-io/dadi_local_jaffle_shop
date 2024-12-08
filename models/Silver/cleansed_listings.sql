@@ -6,10 +6,8 @@ WITH RAW_LISTINGS__RAW_LISTINGS AS ( SELECT * FROM {{ source('RAW_LISTINGS', 'RA
 SELECT
 host_id,   name,   room_type,   price,   listing_url,   minimum_nights,   created_at,   updated_at FROM
 RAW_LISTINGS__RAW_LISTINGS
-WHERE
-room_type = 'Entire home/apt'   AND price > 100   AND minimum_nights <= 30 ORDER BY
-created_at DESC LIMIT
-1000
+ORDER BY
+created_at DESC
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 ---- Select relevant columns from the raw listings table with specific filtering criteria
@@ -24,14 +22,6 @@ created_at DESC LIMIT
 --  updated_at -- Update timestamp
 --FROM
 --  RAW_LISTINGS__RAW_LISTINGS
---WHERE
---  room_type = 'Entire home/apt' -- Filter to include only entire homes/apartments
---  AND price > 100 -- Filter to include listings with a price above 100
---  AND minimum_nights <= 30 -- Filter to include listings with a maximum stay of 30 nights
 --ORDER BY
 --  created_at DESC -- Order by newest listings
---LIMIT
---  1000;
---
----- Limit results to 1000 rows
 --</ORIGINAL_CODE>
