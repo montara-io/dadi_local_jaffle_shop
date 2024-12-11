@@ -20,7 +20,7 @@ created_at DESC
 --  minimum_nights, -- Minimum number of nights for booking
 --  created_at, -- Creation timestamp
 --  updated_at -- Update timestamp
---FROM
+--FROM 
 --  RAW_LISTINGS__RAW_LISTINGS
 --ORDER BY
 --  created_at DESC -- Order by newest listings
