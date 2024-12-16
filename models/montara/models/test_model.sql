@@ -3,14 +3,30 @@
 
 WITH cleansed_hosts AS (SELECT * FROM {{ ref('cleansed_hosts') }})
 
-select
-*
-from
+SELECT
+TRIM(LOWER(NAME)) AS NAME_CLEANED,
+CASE
+WHEN LOWER(IS_SUPERHOST) = 'yes' THEN 't'
+WHEN LOWER(IS_SUPERHOST) = 'no' THEN 'f'
+ELSE NULL
+END AS IS_SUPERHOST_CLEANED,
+CAST(CREATED_AT AS DATE) AS CREATED_AT_DATE,
+CAST(UPDATED_AT AS DATE) AS UPDATED_AT_DATE,
+ID
+FROM
 cleansed_hosts
 --</DBT_CODE>
 --<ORIGINAL_CODE>
---select
---  *
---from
---  cleansed_hosts
+--SELECT
+--    TRIM(LOWER(NAME)) AS NAME_CLEANED,
+--    CASE
+--        WHEN LOWER(IS_SUPERHOST) = 'yes' THEN 't'
+--        WHEN LOWER(IS_SUPERHOST) = 'no' THEN 'f'
+--        ELSE NULL
+--    END AS IS_SUPERHOST_CLEANED,
+--    CAST(CREATED_AT AS DATE) AS CREATED_AT_DATE,
+--    CAST(UPDATED_AT AS DATE) AS UPDATED_AT_DATE,
+--    ID
+--FROM
+--    cleansed_hosts;
 --</ORIGINAL_CODE>

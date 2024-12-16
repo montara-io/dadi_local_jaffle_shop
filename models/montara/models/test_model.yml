@@ -1,25 +1,30 @@
 version: 2
 models:
-  - name: test_model
+  - name: "test_model"
     description: ""
     config:
-      materialized: table
+      materialized: "table"
     tests: []
     columns:
-      - name: ID
-        type: NUMBER
+      - name: "ID"
+        type: "NUMBER"
         tests: []
-      - name: NAME
-        type: TEXT
+      - name: "NAME"
+        type: "TEXT"
         tests: []
-      - name: IS_SUPERHOST
-        type: TEXT
+      - name: "IS_SUPERHOST"
+        type: "TEXT"
         tests: []
-      - name: CREATED_AT
-        type: TIMESTAMP
+      - name: "CREATED_AT"
+        type: "TIMESTAMP"
         tests: []
-      - name: UPDATED_AT
-        type: TIMESTAMP
+      - name: "UPDATED_AT"
+        type: "TIMESTAMP"
         tests: []
     meta:
       model_tags: []
+      incremental_config:
+        origin_name: null
+        origin_column: null
+        target_column: ""
+        window_size_days: null
