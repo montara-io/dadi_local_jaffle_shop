@@ -1,9 +1,16 @@
 version: 2
 models:
-  - name: new_dadi_new
+  - name: "new_dadi_new"
+    description: ""
     config:
-      materialized: table
+      materialized: "table"
     tests: []
     columns: []
     meta:
       model_tags: []
+      incremental_config:
+        origin_name: null
+        origin_column: null
+        target_column: ""
+        window_size_days: null
+        target_window_size_days: null
