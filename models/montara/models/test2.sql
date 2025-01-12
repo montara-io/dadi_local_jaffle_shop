@@ -6,11 +6,11 @@ WITH cleansed_hosts AS (SELECT * FROM {{ ref('cleansed_hosts') }})
 select
 *
 from
-cleansed_hosts limit 100
+cleansed_hosts limit 1000
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 --select
 --  *
 --from
---  cleansed_hosts limit 100
+--  cleansed_hosts limit 1000
 --</ORIGINAL_CODE>
