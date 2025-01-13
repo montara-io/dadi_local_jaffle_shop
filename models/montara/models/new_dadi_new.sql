@@ -6,11 +6,11 @@ WITH cleansed_hosts AS (SELECT * FROM {{ ref('cleansed_hosts') }})
 select
 *
 from
-cleansed_hosts
+cleansed_hosts c
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 --select
 --  *
 --from
---  cleansed_hosts
+--  cleansed_hosts c
 --</ORIGINAL_CODE>
