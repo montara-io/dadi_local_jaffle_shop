@@ -1,0 +1,12 @@
+version: 2
+models:
+  - name: "dbt_python"
+    description: ""
+    config:
+      materialized: "table"
+    tests: []
+    columns: []
+    meta:
+      model_tags: []
+      incremental_config:
+        target_column: ""
