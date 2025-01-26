@@ -9,7 +9,7 @@ models:
       incremental_strategy: "merge"
       schema: "{{ 'prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
         prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
-        prod_e5jj6ggu_ezztt_com' if target.name == 'dev' else
+        prod_e5jj6ggu_ezztt_com' if target.name == 'prod' else
         'prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
         prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com'
         }}"
@@ -75,3 +75,4 @@ models:
         origin_column: null
         target_column: "updated_at"
         window_size_days: null
+        target_window_size_days: null
