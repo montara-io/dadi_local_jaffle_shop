@@ -7,11 +7,8 @@ models:
       unique_key:
         - "id"
       incremental_strategy: "merge"
-      schema: "{{ 'prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
-        prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
-        prod_e5jj6ggu_ezztt_com' if target.name == 'dev' else
-        'prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
-        prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com'
+      schema: "{{ 'prod_e5jj6ggu_ezztt_com' if target.name == 'dev' else
+        'prod_e5jj6ggu_ezztt_com'
         }}"
     tests: []
     columns:
