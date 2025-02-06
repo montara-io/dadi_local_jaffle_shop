@@ -1,0 +1,13 @@
+version: 2
+models:
+  - name: ""
+    description: ""
+    config:
+      materialized: "table"
+    tests: []
+    columns: []
+    meta:
+      model_tags: []
+      incremental_config:
+        target_column: ""
+        incremental_origins: []
