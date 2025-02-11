@@ -7,14 +7,11 @@ select
 *
 from
 cleansed_hosts
-limit
-1000
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 --select
 --  *
 --from
 --  cleansed_hosts
---limit
---  1000
+--
 --</ORIGINAL_CODE>
