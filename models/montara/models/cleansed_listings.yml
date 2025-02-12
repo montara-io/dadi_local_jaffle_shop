@@ -7,9 +7,7 @@ models:
       unique_key:
         - "id"
       incremental_strategy: "merge"
-      schema: "{{ 'prod_e5jj6ggu_ezztt_com' if target.name == 'dev' else
-        'prod_e5jj6ggu_ezztt_com'
-        }}"
+      schema: "{{ 'prod_e5jj6ggu_ezztt_com' if target.name == 'dev' else 'prod_e5jj6ggu_ezztt_com' }}"
     tests: []
     columns:
       - name: "created_at"
@@ -59,12 +57,8 @@ models:
         tests: []
     meta:
       schema:
-        production: "prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
-          prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
-          prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com"
-        test: "prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
-          prod_e5jj6ggu_ezztt_com prod_e5jj6ggu_ezztt_com
-          prod_e5jj6ggu_ezztt_com"
+        production: "prod_e5jj6ggu_ezztt_com"
+        test: "prod_e5jj6ggu_ezztt_com"
       model_tags:
         - "37351916-6210-4099-a2f1-16f0cb67523b"
       incremental_config:
