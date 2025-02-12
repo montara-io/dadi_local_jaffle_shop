@@ -7,7 +7,8 @@ models:
       unique_key:
         - "id"
       incremental_strategy: "merge"
-      schema: "{{ 'prod_e5jj6ggu_ezztt_com' if target.name == 'dev' else 'prod_e5jj6ggu_ezztt_com' }}"
+      schema: "{{ 'prod_e5jj6ggu_ezztt_com' if target.name == 'prod' else
+        'prod_e5jj6ggu_ezztt_com' }}"
     tests: []
     columns:
       - name: "created_at"
@@ -62,7 +63,6 @@ models:
       model_tags:
         - "37351916-6210-4099-a2f1-16f0cb67523b"
       incremental_config:
-        origin_name: null
-        origin_column: null
         target_column: "updated_at"
-        window_size_days: null
+        target_window_size_days: null
+        incremental_origins: []
