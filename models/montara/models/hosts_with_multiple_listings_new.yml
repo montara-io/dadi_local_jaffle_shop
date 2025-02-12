@@ -6,15 +6,37 @@ models:
       materialized: "table"
     tests: []
     columns:
-      - name: "actual list price: list price*quantity"
+      - name: "minimum_nights"
         type: "NUMBER"
+        tests: []
+      - name: "name"
+        type: "TEXT"
+        tests: []
+      - name: "host_id"
+        type: "NUMBER"
+        tests: []
+      - name: "room_type"
+        type: "TEXT"
+        tests: []
+      - name: "id"
+        type: "NUMBER"
+        tests: []
+      - name: "created_at"
+        type: "TIMESTAMP"
+        tests: []
+      - name: "updated_at"
+        type: "TIMESTAMP"
+        tests: []
+      - name: "price"
+        type: "TEXT"
+        tests: []
+      - name: "listing_url"
+        type: "TEXT"
         tests: []
     meta:
       model_tags:
         - "37351916-6210-4099-a2f1-16f0cb67523b"
       incremental_config:
-        origin_name: null
-        origin_column: null
         target_column: ""
-        window_size_days: null
         target_window_size_days: null
+        incremental_origins: []
