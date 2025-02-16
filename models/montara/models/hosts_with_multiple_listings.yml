@@ -1,8 +1,8 @@
 version: 2
 models:
   - name: "hosts_with_multiple_listings"
+    description: ""
     config:
-      enabled: true
       materialized: "table"
     tests: []
     columns:
