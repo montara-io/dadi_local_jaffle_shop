@@ -4,10 +4,13 @@ models:
     description: ""
     config:
       materialized: "table"
+      unique_key: null
+      incremental_strategy: null
     tests: []
     columns: []
     meta:
       model_tags: []
       incremental_config:
         target_column: ""
+        target_window_size_days: null
         incremental_origins: []
