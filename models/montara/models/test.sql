@@ -4,13 +4,43 @@
 WITH cleansed_hosts AS (SELECT * FROM {{ ref('cleansed_hosts') }})
 
 select
-*
+id id1,
+is_superhost is_superhost1,
+name name1,
+updated_at updated_at1,
+id id2,
+is_superhost is_superhost2,
+name name2,
+updated_at updated_at2,
+id id3,
+is_superhost is_superhost3,
+name name3,
+updated_at updated_at3,
+id id4,
+is_superhost is_superhost4,
+name name4,
+updated_at updated_at4
 from
 cleansed_hosts
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 --select
---  *
+--  id id1,
+--  is_superhost is_superhost1,
+--  name name1,
+--  updated_at updated_at1,
+--  id id2,
+--  is_superhost is_superhost2,
+--  name name2,
+--  updated_at updated_at2,
+--  id id3,
+--  is_superhost is_superhost3,
+--  name name3,
+--  updated_at updated_at3,
+--  id id4,
+--  is_superhost is_superhost4,
+--  name name4,
+--  updated_at updated_at4
 --from
 --  cleansed_hosts
 --</ORIGINAL_CODE>
