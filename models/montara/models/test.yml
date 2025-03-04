@@ -33,5 +33,3 @@ models:
           - column: "CREATED_AT"
             name: "cleansed_hosts"
             window_size_days: 3
-      data_retention_days:
-        production: 30
