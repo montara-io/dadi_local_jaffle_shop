@@ -5,10 +5,12 @@ WITH cleansed_listings AS (SELECT * FROM {{ ref('cleansed_listings') }})
 
 select
 *
-from cleansed_listings
+from
+cleansed_listings
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 --select
 --  *
---from cleansed_listings
+--from
+--  cleansed_listings
 --</ORIGINAL_CODE>

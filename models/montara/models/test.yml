@@ -1,0 +1,31 @@
+version: 2
+models:
+  - name: "test"
+    description: ""
+    config:
+      materialized: "table"
+      unique_key: null
+      incremental_strategy: null
+    tests: []
+    columns:
+      - name: "ID"
+        type: "NUMBER"
+        tests: []
+      - name: "NAME"
+        type: "TEXT"
+        tests: []
+      - name: "IS_SUPERHOST"
+        type: "TEXT"
+        tests: []
+      - name: "CREATED_AT"
+        type: "TIMESTAMP"
+        tests: []
+      - name: "UPDATED_AT"
+        type: "TIMESTAMP"
+        tests: []
+    meta:
+      model_tags: []
+      incremental_config:
+        target_column: ""
+        target_window_size_days: null
+        incremental_origins: []
