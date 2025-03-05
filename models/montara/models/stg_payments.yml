@@ -1,22 +1,28 @@
 version: 2
 models:
-  - name: stg_payments
+  - name: "stg_payments"
     description: ""
     config:
-      materialized: view
+      materialized: "view"
+      unique_key: null
+      incremental_strategy: null
     tests: []
     columns:
-      - name: PAYMENT_ID
-        type: NUMBER
+      - name: "PAYMENT_ID"
+        type: "NUMBER"
         tests: []
-      - name: ORDER_ID
-        type: NUMBER
+      - name: "ORDER_ID"
+        type: "NUMBER"
         tests: []
-      - name: PAYMENT_METHOD
-        type: TEXT
+      - name: "PAYMENT_METHOD"
+        type: "TEXT"
         tests: []
-      - name: AMOUNT
-        type: NUMBER
+      - name: "AMOUNT"
+        type: "NUMBER"
         tests: []
     meta:
       model_tags: []
+      incremental_config:
+        target_column: ""
+        target_window_size_days: null
+        incremental_origins: []
