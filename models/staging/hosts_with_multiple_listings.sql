@@ -8,7 +8,7 @@ select
 from
 cleansed_listings
 limit
-1000
+10000
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 --select
@@ -16,5 +16,5 @@ limit
 --from
 --  cleansed_listings
 --limit
---  1000
+--  10000
 --</ORIGINAL_CODE>
