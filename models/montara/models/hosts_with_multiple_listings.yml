@@ -4,6 +4,8 @@ models:
     description: ""
     config:
       materialized: "table"
+      unique_key: null
+      incremental_strategy: null
     tests: []
     columns:
       - name: "minimum_nights"
