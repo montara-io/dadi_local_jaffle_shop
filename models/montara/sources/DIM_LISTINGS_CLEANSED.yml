@@ -5,7 +5,7 @@ sources:
     database: airbnb
     tables:
       - name: DIM_LISTINGS_CLEANSED
-        description: ""
+        description: testet
         columns:
           - name: MINIMUM_NIGHTS
             type: NUMBER
@@ -16,10 +16,10 @@ sources:
           - name: UPDATED_AT
             type: TIMESTAMP
             tests: []
-          - name: LISTING_ID
+          - name: PRICE
             type: NUMBER
             tests: []
-          - name: PRICE
+          - name: LISTING_ID
             type: NUMBER
             tests: []
           - name: ROOM_TYPE
@@ -31,4 +31,3 @@ sources:
           - name: CREATED_AT
             type: TIMESTAMP
             tests: []
-    loaded_at_field: CREATED_AT
