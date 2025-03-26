@@ -7,14 +7,10 @@ select
 *
 from
 cleansed_listings
-limit
-100
 --</DBT_CODE>
 --<ORIGINAL_CODE>
 --select
 --  *
 --from
 --  cleansed_listings
---limit
---  100
 --</ORIGINAL_CODE>
