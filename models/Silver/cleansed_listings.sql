@@ -10,6 +10,7 @@ from
 RAW_LISTINGS__RAW_LISTINGS
 where
 id is not null
+limit 10
 ) AS montara_model
 --<INCREMENTAL>
 {% if is_incremental() %}
@@ -24,4 +25,5 @@ id is not null
 --  RAW_LISTINGS__RAW_LISTINGS
 --where
 --  id is not null
+--  limit 10
 --</ORIGINAL_CODE>
