@@ -3,3 +3,4 @@ with raw_hosts as (
 )
 
 select * from raw_hosts
+limit 1000000
