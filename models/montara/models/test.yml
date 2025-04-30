@@ -3,9 +3,10 @@ models:
   - name: "test"
     description: ""
     config:
-      materialized: "table"
-      unique_key: null
-      incremental_strategy: null
+      materialized: "incremental"
+      unique_key:
+        - "ID"
+      incremental_strategy: "merge"
     tests: []
     columns:
       - name: "ID"
@@ -26,6 +27,11 @@ models:
     meta:
       model_tags: []
       incremental_config:
-        target_column: ""
+        target_column: "CREATED_AT"
         target_window_size_days: null
-        incremental_origins: []
+        incremental_origins:
+          - column: "CREATED_AT"
+            name: "cleansed_hosts"
+            window_size_days: 0
+      data_retention_days:
+        production: 180
