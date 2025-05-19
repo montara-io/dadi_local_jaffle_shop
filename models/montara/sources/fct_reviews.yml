@@ -1,0 +1,24 @@
+version: 2
+sources:
+  - name: fct_reviews
+    schema: dev
+    database: airbnb
+    tables:
+      - name: fct_reviews
+        description: ""
+        columns:
+          - name: NAME
+            type: TEXT
+            tests: []
+          - name: CREATED_AT
+            type: TIMESTAMP
+            tests: []
+          - name: IS_SUPERHOST
+            type: TEXT
+            tests: []
+          - name: UPDATED_AT
+            type: TIMESTAMP
+            tests: []
+          - name: ID
+            type: NUMBER
+            tests: []
