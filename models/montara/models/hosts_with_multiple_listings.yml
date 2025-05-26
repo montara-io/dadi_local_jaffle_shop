@@ -4,8 +4,7 @@ models:
     description: ""
     config:
       materialized: "table"
-      unique_key: null
-      incremental_strategy: null
+      unique_key: []
     tests: []
     columns:
       - name: "minimum_nights"
@@ -40,5 +39,4 @@ models:
         - "37351916-6210-4099-a2f1-16f0cb67523b"
       incremental_config:
         target_column: ""
-        target_window_size_days: null
         incremental_origins: []
