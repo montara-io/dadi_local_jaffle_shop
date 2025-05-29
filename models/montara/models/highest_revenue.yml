@@ -1,0 +1,40 @@
+version: 2
+models:
+  - name: "highest_revenue"
+    config:
+      materialized: "incremental"
+      unique_key:
+        - "ID"
+      enabled: true
+      incremental_strategy: "merge"
+      database: null
+      schema: null
+    tests: []
+    columns:
+      - name: "ID"
+        type: "NUMBER"
+        tests: []
+      - name: "NAME"
+        type: "TEXT"
+        tests: []
+      - name: "IS_SUPERHOST"
+        type: "TEXT"
+        tests: []
+      - name: "CREATED_AT"
+        type: "TIMESTAMP"
+        tests: []
+      - name: "UPDATED_AT"
+        type: "TIMESTAMP"
+        tests: []
+    meta:
+      model_tags: []
+      incremental_config:
+        target_column: "CREATED_AT"
+        target_window_size_days: null
+        incremental_origins:
+          - column: "CREATED_AT"
+            name: "cleansed_hosts"
+            window_size_days: 0
+      data_retention_days:
+        production: 180
+      updated: "2025-05-29T15:11:18.960Z"
