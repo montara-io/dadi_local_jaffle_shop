@@ -24,6 +24,9 @@ models:
       - name: "UPDATED_AT"
         type: "TIMESTAMP"
         tests: []
+      - name: "total_revenue"
+        type: "NUMBER"
+        tests: []
     meta:
       model_tags: []
       incremental_config:
@@ -35,4 +38,4 @@ models:
       data_retention_days:
         staging: null
         production: 180
-      updated: "2025-06-01T08:28:26.278Z"
+      updated: "2025-06-01T08:57:53.142Z"
