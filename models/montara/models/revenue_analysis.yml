@@ -24,6 +24,9 @@ models:
       - name: "UPDATED_AT"
         type: "TIMESTAMP"
         tests: []
+      - name: "max_revenue"
+        type: "NUMBER"
+        tests: []
     meta:
       model_tags: []
       incremental_config:
@@ -35,4 +38,4 @@ models:
       data_retention_days:
         staging: null
         production: 180
-      updated: "2025-06-01T10:06:02.058Z"
+      updated: "2025-06-01T10:07:30.169Z"
