@@ -1,14 +1,12 @@
 version: 2
 models:
   - name: "revenue_analysis"
+    description: ""
     config:
       materialized: "incremental"
       unique_key:
         - "ID"
-      enabled: true
       incremental_strategy: "merge"
-      database: null
-      schema: null
     tests: []
     columns:
       - name: "ID"
@@ -30,11 +28,11 @@ models:
       model_tags: []
       incremental_config:
         target_column: "CREATED_AT"
-        target_window_size_days: null
         incremental_origins:
           - column: "CREATED_AT"
             name: "cleansed_hosts"
             window_size_days: 0
       data_retention_days:
+        staging: null
         production: 180
-      updated: "2025-05-29T12:25:46.787Z"
+      updated: "2025-06-01T10:06:02.058Z"
