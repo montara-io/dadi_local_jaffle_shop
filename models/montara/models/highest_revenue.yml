@@ -27,6 +27,9 @@ models:
       - name: "current_date"
         type: "DATE"
         tests: []
+      - name: "total_revenue"
+        type: "NUMBER"
+        tests: []
     meta:
       model_tags: []
       incremental_config:
@@ -38,4 +41,4 @@ models:
       data_retention_days:
         staging: null
         production: 180
-      updated: "2025-06-01T10:03:51.279Z"
+      updated: "2025-06-01T10:06:53.022Z"
