@@ -46,6 +46,11 @@ models:
         tests:
           - not_null_tolerance:
               tolerance: 0
+          - date_range_tolerance:
+              range_type: "Between"
+              after: "2025-7-8"
+              before: "2025-7-11"
+              tolerance: 0
       - name: "listing_url"
         type: "TEXT"
         tests:
@@ -65,4 +70,4 @@ models:
       incremental_config:
         target_column: "updated_at"
         incremental_origins: []
-      updated: "2025-07-03T09:34:01.746Z"
+      updated: "2025-07-03T12:45:20.531Z"
