@@ -6,16 +6,13 @@ models:
       materialized: "incremental"
       unique_key:
         - "id"
+      enabled: true
       incremental_strategy: "merge"
+      database: null
       schema: "{{ 'prod_e5jj6ggu_ezztt_com' if target.name == 'prod' else
         'prod_e5jj6ggu_ezztt_com' }}"
     tests: []
     columns:
-      - name: "created_at"
-        type: "TIMESTAMP"
-        tests:
-          - not_null_tolerance:
-              tolerance: 0
       - name: "host_id"
         type: "NUMBER"
         tests:
@@ -23,43 +20,37 @@ models:
               tolerance: 0
           - unique_tolerance:
               tolerance: 0
-      - name: "room_type"
-        type: "TEXT"
-        tests:
-          - not_null_tolerance:
-              tolerance: 0
-      - name: "id"
+      - name: "HIGHEST_PRICE_LISTING"
         type: "NUMBER"
+        description: ""
         tests: []
-      - name: "price"
+      - name: "HOST_NAME"
         type: "TEXT"
-        tests:
-          - not_null_tolerance:
-              tolerance: 0
-      - name: "name"
+        description: ""
+        tests: []
+      - name: "IS_SUPERHOST"
         type: "TEXT"
-        tests:
-          - not_null_tolerance:
-              tolerance: 0
-      - name: "updated_at"
+        description: ""
+        tests: []
+      - name: "LAST_UPDATED_AT"
         type: "TIMESTAMP"
-        tests:
-          - not_null_tolerance:
-              tolerance: 0
-          - date_range_tolerance:
-              range_type: "Between"
-              after: "2025-7-8"
-              before: "2025-7-11"
-              tolerance: 0
-      - name: "listing_url"
-        type: "TEXT"
-        tests:
-          - not_null_tolerance:
-              tolerance: 0
-          - unique_tolerance:
-              tolerance: 0
-      - name: "minimum_nights"
+        description: ""
+        tests: []
+      - name: "TOTAL_REVENUE"
         type: "NUMBER"
+        description: ""
+        tests: []
+      - name: "LOWEST_PRICE_LISTING"
+        type: "NUMBER"
+        description: ""
+        tests: []
+      - name: "TOTAL_LISTINGS"
+        type: "NUMBER"
+        description: ""
+        tests: []
+      - name: "AVERAGE_LISTING_PRICE"
+        type: "NUMBER"
+        description: ""
         tests: []
     meta:
       schema:
@@ -70,4 +61,4 @@ models:
       incremental_config:
         target_column: "updated_at"
         incremental_origins: []
-      updated: "2025-07-03T12:45:20.531Z"
+      updated: "2025-07-03T12:45:48.973Z"
