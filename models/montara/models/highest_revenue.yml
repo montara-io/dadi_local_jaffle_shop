@@ -1,7 +1,9 @@
 version: 2
 models:
   - name: "highest_revenue"
-    description: ""
+    description: "Retrieves up to 1001 cleansed_hosts records, including all
+      columns, each customer's total revenue from associated orders, and the
+      current date."
     config:
       materialized: "incremental"
       unique_key:
@@ -11,24 +13,31 @@ models:
     columns:
       - name: "ID"
         type: "NUMBER"
+        description: "Unique identifier for the host."
         tests: []
       - name: "NAME"
         type: "TEXT"
+        description: "Full name of the host."
         tests: []
       - name: "IS_SUPERHOST"
         type: "TEXT"
+        description: "Indicates whether the host has superhost status (true/false)."
         tests: []
       - name: "CREATED_AT"
         type: "TIMESTAMP"
+        description: "Date and time when the host record was created."
         tests: []
       - name: "UPDATED_AT"
         type: "TIMESTAMP"
+        description: "Date and time when the host record was last updated."
         tests: []
       - name: "current_date"
         type: "DATE"
+        description: "The current date when the query is executed."
         tests: []
       - name: "total_revenue"
         type: "NUMBER"
+        description: "Total revenue generated from the host’s orders."
         tests: []
     meta:
       model_tags: []
@@ -41,4 +50,4 @@ models:
       data_retention_days:
         staging: null
         production: 180
-      updated: "2025-07-06T13:49:17.879Z"
+      updated: "2025-07-06T20:02:08.169Z"
