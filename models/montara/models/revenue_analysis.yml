@@ -38,4 +38,4 @@ models:
       data_retention_days:
         staging: null
         production: 180
-      updated: "2025-06-01T10:07:30.169Z"
+      updated: "2025-07-17T13:39:12.392Z"
