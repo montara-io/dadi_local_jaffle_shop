@@ -64,5 +64,5 @@ models:
         - "37351916-6210-4099-a2f1-16f0cb67523b"
       incremental_config:
         target_column: "updated_at"
-        target_window_size_days: null
         incremental_origins: []
+      updated: "2025-08-24T08:59:38.103Z"
