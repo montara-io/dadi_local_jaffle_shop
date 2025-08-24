@@ -65,4 +65,4 @@ models:
       incremental_config:
         target_column: "updated_at"
         incremental_origins: []
-      updated: "2025-08-24T08:59:38.103Z"
+      updated: "2025-08-24T14:41:43.624Z"
