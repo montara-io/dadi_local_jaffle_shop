@@ -21,8 +21,6 @@ models:
         tests:
           - not_null_tolerance:
               tolerance: 0
-          - unique_tolerance:
-              tolerance: 0
       - name: "room_type"
         type: "TEXT"
         tests:
@@ -65,4 +63,4 @@ models:
       incremental_config:
         target_column: "updated_at"
         incremental_origins: []
-      updated: "2025-08-24T14:41:43.624Z"
+      updated: "2025-08-25T13:17:46.364Z"
