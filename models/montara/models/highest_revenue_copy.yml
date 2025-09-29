@@ -1,0 +1,53 @@
+version: 2
+models:
+  - name: "highest_revenue_copy"
+    config:
+      materialized: "incremental"
+      unique_key:
+        - "ID"
+      enabled: true
+      incremental_strategy: "merge"
+      database: null
+      schema: null
+    tests: []
+    columns:
+      - name: "ID"
+        type: "NUMBER"
+        description: "Unique identifier for the host."
+        tests: []
+      - name: "NAME"
+        type: "TEXT"
+        description: "Full name of the host."
+        tests: []
+      - name: "IS_SUPERHOST"
+        type: "TEXT"
+        description: "Indicates whether the host has superhost status (true/false)."
+        tests: []
+      - name: "CREATED_AT"
+        type: "TIMESTAMP"
+        description: "Date and time when the host record was created."
+        tests: []
+      - name: "UPDATED_AT"
+        type: "TIMESTAMP"
+        description: "Date and time when the host record was last updated."
+        tests: []
+      - name: "current_date"
+        type: "DATE"
+        description: "The current date when the query is executed."
+        tests: []
+      - name: "total_revenue"
+        type: "NUMBER"
+        description: "Total revenue generated from the host’s orders."
+        tests: []
+    meta:
+      model_tags: []
+      incremental_config:
+        target_column: "CREATED_AT"
+        incremental_origins:
+          - column: "CREATED_AT"
+            name: "cleansed_hosts"
+            window_size_days: 0
+      data_retention_days:
+        staging: null
+        production: 180
+      updated: "2025-09-29T11:32:23.581Z"
