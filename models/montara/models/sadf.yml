@@ -1,0 +1,35 @@
+version: 2
+models:
+  - name: "sadf"
+    description: ""
+    config:
+      materialized: "table"
+      unique_key:
+        - "id"
+      incremental_strategy: "merge"
+    tests: []
+    columns:
+      - name: "created_at"
+        type: "TIMESTAMP"
+        tests: []
+      - name: "id"
+        type: "NUMBER"
+        tests: []
+      - name: "is_superhost"
+        type: "TEXT"
+        tests: []
+      - name: "updated_at"
+        type: "TIMESTAMP"
+        tests: []
+      - name: "name"
+        type: "TEXT"
+        tests: []
+    meta:
+      model_tags: []
+      incremental_config:
+        target_column: "created_at"
+        incremental_origins:
+          - column: "UPDATED_AT"
+            name: "cleansed_hosts"
+            window_size_days: 0
+      updated: "2025-10-16T12:08:56.428Z"
